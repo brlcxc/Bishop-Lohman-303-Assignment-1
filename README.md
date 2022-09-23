@@ -1,5 +1,5 @@
 # Bishop-Lohman-303
-A Menu is output with a set of options to the user
+//A Menu is output with a set of options to the user
   If the user selects 'a'
     -the menu is printed
   If the user selects 'b' 
@@ -16,7 +16,7 @@ A Menu is output with a set of options to the user
     -they are propmpted to input an index
     -the value at the index is removed
   If the user selects 'q'
-    -the program exists
+    -the program exists\\
  
 option 'a' and 'b'
 ![image](https://user-images.githubusercontent.com/90850429/192043780-8a474b7e-6f46-41a6-9e13-f306661ad891.png)
