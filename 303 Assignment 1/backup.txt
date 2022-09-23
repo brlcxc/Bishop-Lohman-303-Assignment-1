@@ -1,0 +1,111 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+void main() {
+	int const row = 3;
+	int const column = 2;
+	ifstream fin("input.txt");
+	int array[row][column];
+	int userInput;
+
+	int* p = new int[row * column];
+
+	//i might need to change this accomodate different sized rows
+	//when adding new do I just need to change the rows if it gets too large
+	// the const row can be created after the first line is read
+	//I will probablh need a dynamic array
+	//by reading when the line ends i dont have to have to check eof inside the loop
+	//i need this to change to properly let it catch
+	while (fin.good()) {
+		//for (int i = 0; i < row; ++i) {
+		//	for (int j = 0; j < column; ++j) {
+		//		fin >> userInput;
+		//		//cout << userInput << endl;
+		//		array[i][j] = userInput;
+		//	}
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < column; j++) {
+				fin >> userInput;
+				*(p + i*row + j) = userInput;
+			}
+		}
+	}
+
+	//for (int i = 0; i < row; ++i) {
+	//	for (int j = 0; j < column; ++j) {
+	//		cout << "[" << array[i][j] << "]";
+	//	}
+	//	cout << endl;
+	//}
+
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < column; j++) {
+			fin >> userInput;
+			cout << "[" << *(p + i*row + j) << "]";
+		}
+		cout << endl;
+	}
+
+	//delete[]p;
+
+	int* q = new int[(row + 1) * column];
+
+
+
+	char userOption;
+
+	cout << "a - Array Menu" << endl;
+	cout << "b - Find Value" << endl;
+	cout << "c - Modify Value" << endl;
+	cout << "f - Add Value" << endl;
+	cout << "d - Remove Value" << endl;
+	cout << "e - print array" << endl;
+	cout << "q - quit" << endl << endl;
+
+	do {
+		cin >> userOption;
+		switch (userOption) {
+		case 'a':
+			//find integer
+			break;
+		case 'b':
+			//modify value
+			break;
+		case 'c':
+			//add integer
+			break;
+		case 'd':
+			//delete integer
+			break;
+		default:
+			break;
+		}
+	} while (userOption != 'q');
+
+	cout << "hello" << endl;
+
+	//int* p;
+	//int arraysize;
+	//p = new int[arrsize];
+	//this is where the if statemes will go to decide to add +1 to either row or column depending on current size
+	
+	/*int* p = new int[2];
+
+	delete[]p;
+	p = NULL;*/
+
+	//int* p = new int[row * column];
+	//for (int i = 0; i < row; i++) {
+	//	for (int j = 0; j < column; j++) {
+	//		*(p + i*row + j) = 
+	//	}
+	//}
+
+
+}
+
+
+//check if the last index is 10 to add a new row
+//if the index of the removed is 0 then remove that row
