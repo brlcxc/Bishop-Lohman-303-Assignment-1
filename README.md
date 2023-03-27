@@ -1,4 +1,4 @@
-# Bishop-Lohman-303
+# Bishop-Lohman-303-Assignment-1
 A Menu is output with a set of options to the user<br />
   If the user selects 'a'<br />
     -the menu is printed<br />
